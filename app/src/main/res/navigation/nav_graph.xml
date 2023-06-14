@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/postsFragment">
+
+    <fragment
+        android:id="@+id/postsFragment"
+        android:name="faketwitter.myapplication.PostsFragment"
+        android:label="PostsFragment" >
+        <action
+            android:id="@+id/from_posts_to_create"
+            app:destination="@id/createFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createFragment"
+        android:name="faketwitter.myapplication.CreateFragment"
+        android:label="CreateFragment" >
+        <action
+            android:id="@+id/from_create_to_posts"
+            app:destination="@id/postsFragment" />
+    </fragment>
+</navigation>
